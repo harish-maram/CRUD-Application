@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<body ng-app="evvemi">
+<div ng-controller="StudentController">
+<h1> Evvemi Project </h1>
+	<form name="studentForm">
+
+		<table>
+			<tr><th>ID		</th> <th>Name			</th> <th>Age		</th> <th>Courseid	</th></tr>
+			<tr ng-repeat="row in students">
+				<td><span ng-bind="row.id"></span></td>
+				<td><span ng-bind="row.name"></span></td>
+				<td><span ng-bind="row.age"></span></td>
+				<td><span ng-bind="row.courseid"></span></td>
+				<td>
+			</tr>
+		</table>
+		
+		<p class="bg-info info-msg" id="info1">{{Message}}</p>
+		<div class="form-group">
+			<label class=blue_font>Name</label>
+			<input class=form-control type="text" id="Name" ng-model="studentForm.name" placeholder="Name" autocomplete="off">
+		</div>
+		
+		<div class="form-group">
+			<label class=blue_font>Age</label>
+			<input class=form-control type="text" id="Age" ng-model="studentForm.age" placeholder="Age" autocomplete="off">
+		</div>
+		
+		<div class="form-group">
+			<label class=blue_font>Courseid</label>
+			<input class=form-control type="text" id="Courseid" ng-model="studentForm.courseid" placeholder="Courseid" autocomplete="off">
+		</div>
+		
+		<div class="btn-wrapper">
+			<div class="row-gutter-5">
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<button class="btn btn_blue" type="button" data-ng-click="create()" id="Create">Create</button>
+				</div>
+		
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<button class="btn btn_blue" type="button" data-ng-click="refresh()" id="refresh">Refresh</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class=blue_font>ID</label>
+			<input class=form-control type="text" id="ID" ng-model="studentform.id" placeholder="ID" autocomplete="off">
+		</div>
+		<div class="row-gutter-5">
+			<div class="col-md-4 col-xs-6 col-sm-6">
+				<button class="btn btn_blue" type="button" data-ng-click="delete()" id="Delete">Delete</button>
+			</div>
+		
+			<div class="col-md-4 col-xs-6 col-sm-6">
+				<button class="btn btn_blue" type="button" data-ng-click="update()" id="Update">Update</button>
+			</div>
+			</div>
+		</div>
+		
+		</form>
+		</div>
+		<script src="./js/angular.min.js"></script>
+		<script src="./js/angular-resource.min.js"></script>
+		<script src="./js/app.js"></script>
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/theme-default.css">
+		<link rel="stylesheet" href="./css/theme-blue.css">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/custom.css">
+		
+</body>
+</html>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
